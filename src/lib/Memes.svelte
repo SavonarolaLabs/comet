@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	interface GalleryItem {
 		src: string;
 		alt: string;
@@ -8,17 +10,17 @@
 
 	export let items: GalleryItem[] = [
 		{
-			src: './comet-erg.png',
+			src: base + '/comet-erg.png',
 			alt: 'Comet-erg',
 			caption: 'Comet-erg'
 		},
 		{
-			src: './comet-musk.png',
+			src: base + '/comet-musk.png',
 			alt: 'Musk holds Comet',
 			caption: 'Musk holds Comet'
 		},
 		{
-			src: './comet-gold.png',
+			src: base + '/comet-gold.png',
 			alt: 'Comet is the new gold',
 			caption: 'Comet is the new gold'
 		},

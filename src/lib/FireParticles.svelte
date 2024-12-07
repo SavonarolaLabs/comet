@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import * as THREE from 'three';
+	import { base } from '$app/paths';
 
 	// Constants for particle system configuration
 	const SPAWN_X = 1.5; // Adjust this for X spawn location
@@ -231,7 +232,7 @@
 
 		// Load the static image and place it at the spawn point
 		const loader = new THREE.TextureLoader();
-		loader.load('./chou.png', (texture) => {
+		loader.load(base + '/chou.png', (texture) => {
 			const imgMaterial = new THREE.MeshBasicMaterial({
 				map: texture,
 				transparent: true
