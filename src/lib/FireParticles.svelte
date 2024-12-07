@@ -96,8 +96,6 @@
 		}
 
 		init(baseParticle: THREE.Mesh): void {
-			// Incorporate mouseYFactor to slightly adjust vertical direction.
-			// Main direction: negative X, negative Y for bottom-left flow.
 			const baseYDirection = this.randomFloat(-0.1, -0.05);
 			const adjustedY = baseYDirection + this.parent.mouseYFactor * 0.02;
 
@@ -150,9 +148,7 @@
 			this.obj = new THREE.Group();
 			this.pos = new THREE.Vector3(0, 0, 0);
 
-			// Set the initial position of the particle system to the constants
 			this.obj.position.set(SPAWN_X, SPAWN_Y, 0);
-
 			this.particles = [];
 
 			this.createBaseParticle(config.rotationAngle);
@@ -191,9 +187,7 @@
 		}
 
 		update(mouse: [number, number], width: number, height: number): void {
-			// Compute a factor from mouse Y. Range ~ -0.5 to 0.5.
 			this.mouseYFactor = mouse[1] / height - 0.5;
-
 			this.particles.forEach((particle) => particle.update(this.scene));
 		}
 	}
@@ -219,20 +213,37 @@
 		],
 		scaleSpeed: 0.95,
 		maxAge: 40,
-		rotationAngle: Math.PI / 4 // Optional: customize rotation angle
+		rotationAngle: Math.PI / 4
 	};
 
 	function setupScene() {
-		// Set alpha: true for transparent background
 		renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, canvas });
 		scene = new THREE.Scene();
 		camera = new THREE.PerspectiveCamera(20, width / height, 0.1, 1000);
 
 		renderer.setSize(width, height);
-		scene.background = null; // Transparent background
+		renderer.setPixelRatio(window.devicePixelRatio);
+
+		scene.background = null;
 		camera.position.z = 50;
 
 		particleSystem = new ParticleSystem(scene, camera, particleCount, fireConfig);
+
+		// Load the static image and place it at the spawn point
+		const loader = new THREE.TextureLoader();
+		loader.load('./chou.png', (texture) => {
+			const imgMaterial = new THREE.MeshBasicMaterial({
+				map: texture,
+				transparent: true
+			});
+			imgMaterial.map.colorSpace = THREE.SRGBColorSpace;
+			const imgGeometry = new THREE.PlaneGeometry(1, 1);
+			const imgMesh = new THREE.Mesh(imgGeometry, imgMaterial);
+			imgMesh.position.set(0.5, 0.7, 0);
+			imgMesh.scale.set(10, 10, 0);
+			imgMesh.rotation.z = THREE.MathUtils.degToRad(40);
+			scene.add(imgMesh);
+		});
 	}
 
 	function render() {
@@ -254,12 +265,20 @@
 		renderer.setSize(width, height);
 	}
 
+	let hoverDirection = 1;
+	function animateHover() {
+		canvas.style.transform = `translateY(${Math.sin(Date.now() * 0.002) * 10}px) rotate(40deg)`;
+		requestAnimationFrame(animateHover);
+	}
 	onMount(() => {
 		setupScene();
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('resize', handleResize);
 		animationFrame = requestAnimationFrame(render);
+		animateHover();
 	});
+
+	onMount(() => {});
 
 	onDestroy(() => {
 		window.removeEventListener('mousemove', handleMouseMove);
@@ -270,18 +289,10 @@
 
 <canvas
 	bind:this={canvas}
-	style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;transform: rotate(40deg);"
+	style="z-index:1;position: absolute; top: 0; right: 20; transform: rotate(40deg);"
 />
 
 <style>
-	:global(body, html) {
-		width: 100%;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		background: transparent;
-	}
 	canvas {
 		background: transparent;
 	}
