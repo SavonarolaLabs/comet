@@ -43,7 +43,7 @@
 				</a>
 
 				<div class="flex flex-col space-y-4">
-					<button class="rounded bg-red-600 px-6 py-2 text-lg hover:bg-red-700"> Get Rekt </button>
+					<button class="rekt rounded px-6 py-2 text-lg hover:bg-red-700"> Get Rekt </button>
 				</div>
 			</div>
 		{/if}
@@ -53,7 +53,9 @@
 			<a href="/roadmap" class="hover:underline">Roadmap</a>
 
 			<div class="flex space-x-2">
-				<button class="rounded bg-red-600 px-3 py-1 hover:bg-red-700"> Get Rekt </button>
+				<button class="rekt rounded px-6 py-2 hover:bg-yellow-300 hover:text-black">
+					Get Rekt
+				</button>
 			</div>
 		</div>
 
@@ -64,5 +66,7 @@
 </nav>
 
 <style>
-	/* Add any additional mobile-specific styles here if needed */
+	.rekt {
+		background-color: #6225e6;
+	}
 </style>
