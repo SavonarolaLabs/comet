@@ -1,6 +1,7 @@
 <script>
 	import FireParticles from '$lib/FireParticles.svelte';
 	import GetRektNow from '$lib/GetRektNow.svelte';
+	import Roadmap from '$lib/Roadmap.svelte';
 	import { onMount } from 'svelte';
 
 	let stars = [];
@@ -52,6 +53,9 @@
 			<FireParticles />
 		</div>
 	</div>
+</div>
+<div class="flex w-full justify-center">
+	<Roadmap></Roadmap>
 </div>
 
 <style>
