@@ -2,6 +2,7 @@
 	import FireParticles from '$lib/FireParticles.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import GetRektNow from '$lib/GetRektNow.svelte';
+	import Memes from '$lib/Memes.svelte';
 	import Roadmap from '$lib/Roadmap.svelte';
 	import Whitepaper from '$lib/Whitepaper.svelte';
 	import { onMount } from 'svelte';
@@ -33,7 +34,7 @@
 
 <div class="relative min-h-screen">
 	<!-- Star Background -->
-	<div class="absolute inset-0" style="z-index:0">
+	<div class="stars absolute inset-0" style="z-index:0">
 		{#each stars as star}
 			<div
 				class="star"
@@ -67,6 +68,9 @@
 <div class="flex w-full justify-center">
 	<Roadmap></Roadmap>
 </div>
+<div class="mt-40 flex w-full justify-center">
+	<Memes></Memes>
+</div>
 <div class="flex w-full justify-center">
 	<Whitepaper></Whitepaper>
 </div>
@@ -76,6 +80,20 @@
 <Footer></Footer>
 
 <style>
+	.stars {
+		background-color: black;
+		animation: fadeToTransparent 30s infinite alternate;
+	}
+
+	@keyframes fadeToTransparent {
+		0% {
+			background-color: black;
+		}
+		100% {
+			background-color: transparent;
+		}
+	}
+
 	.comic-neue-bold-italic {
 		font-family: 'Comic Neue', serif;
 		font-weight: 700;
