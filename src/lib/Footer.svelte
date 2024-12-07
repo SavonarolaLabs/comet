@@ -10,11 +10,11 @@
 			<a href="/" class="inline-block">
 				<img
 					alt="Comet Logo"
-					src="/favicon-32x32.png"
+					src="./chou.png"
 					class="h-8 w-8 transition-opacity hover:opacity-75"
 				/>
 			</a>
-			<p class="mt-6 text-xs text-gray-200">© 2021 Comet. All rights reserved.</p>
+			<p class="mt-12 text-xs text-gray-200">© 2021 Comet. All rights reserved.</p>
 		</div>
 
 		<div>
