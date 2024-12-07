@@ -289,7 +289,7 @@
 
 <canvas
 	bind:this={canvas}
-	style="z-index:1;position: absolute; top: 0; right: 20; transform: rotate(40deg);"
+	style="z-index:0;position: absolute; top: 0; right: 20; transform: rotate(40deg);"
 />
 
 <style>

@@ -43,9 +43,6 @@
 				</a>
 
 				<div class="flex flex-col space-y-4">
-					<button class="rounded bg-orange-600 px-6 py-2 text-lg hover:bg-orange-700">
-						Connect Wallet
-					</button>
 					<button class="rounded bg-red-600 px-6 py-2 text-lg hover:bg-red-700"> Get Rekt </button>
 				</div>
 			</div>
@@ -56,9 +53,6 @@
 			<a href="/roadmap" class="hover:underline">Roadmap</a>
 
 			<div class="flex space-x-2">
-				<button class="rounded bg-orange-600 px-3 py-1 hover:bg-orange-700">
-					Connect Wallet
-				</button>
 				<button class="rounded bg-red-600 px-3 py-1 hover:bg-red-700"> Get Rekt </button>
 			</div>
 		</div>
