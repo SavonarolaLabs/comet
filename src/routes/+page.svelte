@@ -47,8 +47,16 @@
 		<div class="flex" style="z-index:2;">
 			<div class="left-margin">
 				<h1 class="comic-neue-bold-italic mb-4 mt-40 text-9xl font-bold">COMET</h1>
-				<p class="mb-20 ml-4 text-2xl" style="font-family: fantasy">
-					It's like bitcoin but <span class="bold-scale mx-3">1000x</span> better.
+				<p class="mb-20 ml-4 flex items-center text-2xl" style="font-family: fantasy">
+					It's like <img
+						src="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+						width="40px"
+						style="padding-bottom:10px"
+						class="mx-2"
+						alt=""
+					/>
+					but
+					<span class="bold-scale mx-3 pb-1">1000x</span> better.
 				</p>
 				<GetRektNow />
 			</div>
