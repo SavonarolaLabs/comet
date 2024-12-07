@@ -78,15 +78,21 @@
 	];
 </script>
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
-	{#each items as item}
-		<li class="mb-10 ms-4">
-			<div
-				class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-[#6225e6] border-gray-900 dark:bg-gray-700"
-			></div>
-			<time class="mb-1 text-sm font-normal leading-none text-orange-200">{item.date}</time>
-			<h3 class="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-			<p class="mb-4 text-base font-normal text-gray-300">{item.description}</p>
-		</li>
-	{/each}
-</ol>
+<div>
+	<div class="my-10 text-6xl font-bold text-white">Roadmap</div>
+	<ol
+		id="roadmap"
+		class="relative ml-2 max-w-[760px] border-s border-gray-200 dark:border-gray-700"
+	>
+		{#each items as item}
+			<li class="mb-10 ms-4">
+				<div
+					class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-[#6225e6] border-gray-900 dark:bg-gray-700"
+				></div>
+				<time class="mb-1 text-sm font-normal leading-none text-gray-700">{item.date}</time>
+				<h3 class="text-2xl font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+				<p class="mb-4 text-base text-sm text-gray-200">{item.description}</p>
+			</li>
+		{/each}
+	</ol>
+</div>

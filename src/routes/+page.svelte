@@ -1,7 +1,9 @@
 <script>
 	import FireParticles from '$lib/FireParticles.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import GetRektNow from '$lib/GetRektNow.svelte';
 	import Roadmap from '$lib/Roadmap.svelte';
+	import Whitepaper from '$lib/Whitepaper.svelte';
 	import { onMount } from 'svelte';
 
 	let stars = [];
@@ -44,7 +46,7 @@
 	<div class="relative z-10 mx-auto max-w-4xl py-10 text-white">
 		<div class="flex" style="z-index:2;">
 			<div class="left-margin">
-				<h1 class="mb-4 mt-40 text-9xl font-bold">COMET</h1>
+				<h1 class="comic-neue-bold-italic mb-4 mt-40 text-9xl font-bold">COMET</h1>
 				<p class="mb-20 ml-4 text-2xl" style="font-family: fantasy">
 					It's like bitcoin but <span class="bold-scale mx-3">1000x</span> better.
 				</p>
@@ -57,8 +59,20 @@
 <div class="flex w-full justify-center">
 	<Roadmap></Roadmap>
 </div>
+<div class="flex w-full justify-center">
+	<Whitepaper></Whitepaper>
+</div>
+<div class="my-20 flex w-full justify-center">
+	<GetRektNow text={'GET REKT NOW'}></GetRektNow>
+</div>
+<Footer></Footer>
 
 <style>
+	.comic-neue-bold-italic {
+		font-family: 'Comic Neue', serif;
+		font-weight: 700;
+		font-style: italic;
+	}
 	.left-margin {
 		z-index: 10;
 	}
