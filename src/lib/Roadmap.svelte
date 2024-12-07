@@ -79,11 +79,8 @@
 </script>
 
 <div>
-	<div class="my-10 text-6xl font-bold text-white">Roadmap</div>
-	<ol
-		id="roadmap"
-		class="relative ml-2 max-w-[760px] border-s border-gray-200 dark:border-gray-700"
-	>
+	<div class="my-10 text-6xl font-bold text-white" id="roadmap">Roadmap</div>
+	<ol class="relative ml-2 max-w-[760px] border-s border-gray-200 dark:border-gray-700">
 		{#each items as item}
 			<li class="mb-10 ms-4">
 				<div
