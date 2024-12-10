@@ -1,7 +1,9 @@
 <script>
+	import DontBuy from '$lib/DontBuy.svelte';
 	import FireParticles from '$lib/FireParticles.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import GetRektNow from '$lib/GetRektNow.svelte';
+	import GetRektNow from '$lib/GetRektNowAda.svelte';
+	import GetRektNowErgo from '$lib/GetRektNowErgo.svelte';
 	import Memes from '$lib/Memes.svelte';
 	import Roadmap from '$lib/Roadmap.svelte';
 	import Whitepaper from '$lib/Whitepaper.svelte';
@@ -59,7 +61,7 @@
 					but
 					<span class="bold-scale mx-3 pb-1">1000x</span> better.
 				</p>
-				<GetRektNow />
+				<DontBuy></DontBuy>
 			</div>
 			<FireParticles />
 		</div>
@@ -75,7 +77,7 @@
 	<Whitepaper></Whitepaper>
 </div>
 <div class="my-20 flex w-full justify-center">
-	<GetRektNow text={'GET REKT NOW'}></GetRektNow>
+	<DontBuy></DontBuy>
 </div>
 <Footer></Footer>
 

@@ -1,11 +1,11 @@
 <script lang="ts">
 	// No logic needed
-	export let text = 'BUY NOW';
+	export let text = "DON'T BUY NOW";
 </script>
 
 <div class="flex items-center justify-center">
 	<a
-		href="https://dex.mewfinance.com/ergo/swap?base=0000000000000000000000000000000000000000000000000000000000000000&quote=0cd8c9f416e5b1ca9f986a7f10a84191dfb85941619e49e53c0dc30ebf83324b&initialPoolId=1f01dc8e29806d96ca0b79f8e798cd8cfce51c0e676aaedf6ab3464b37da9dfd"
+		href="https://app.dexhunter.io/swap?tokenIdSell=&tokenIdBuy=d85d4588d4625b370121597ff88f3c1fa66f2a0cb7e4a7a9573a3c3e7273434f4d4554"
 		class="cta"
 	>
 		<span>{text}</span>
@@ -53,7 +53,7 @@
 		font-family: 'Poppins', sans-serif;
 		font-size: 40px;
 		color: white;
-		background: #6225e6;
+		background: #0033ad;
 		transition: 1s;
 		box-shadow: 6px 6px 0 rgb(173, 14, 14);
 		transform: skewX(-15deg);
