@@ -75,17 +75,19 @@
 		</div>
 	</div>
 </div>
-<div class="flex w-full justify-center">
-	<Roadmap></Roadmap>
-</div>
-<div class="mt-40 flex w-full justify-center">
-	<Memes></Memes>
-</div>
-<div class="flex w-full justify-center">
-	<Whitepaper></Whitepaper>
-</div>
-<div class="my-20 flex w-full justify-center">
-	<DontBuy></DontBuy>
+<div class="flex w-full flex-col justify-center px-6">
+	<div class="flex w-full justify-center">
+		<Roadmap></Roadmap>
+	</div>
+	<div class="mt-40 flex w-full justify-center">
+		<Memes></Memes>
+	</div>
+	<div class="flex w-full justify-center">
+		<Whitepaper></Whitepaper>
+	</div>
+	<div class="my-20 flex w-full justify-center">
+		<DontBuy></DontBuy>
+	</div>
 </div>
 <Footer></Footer>
 
