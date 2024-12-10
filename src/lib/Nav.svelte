@@ -9,8 +9,8 @@
 	}
 </script>
 
-<nav class="bg-orange-600 text-white">
-	<div class="container mx-auto flex items-center justify-between p-4" style="z-index:10;">
+<nav class="relative bg-orange-600 text-white" style="z-index:10;">
+	<div class="container mx-auto flex items-center justify-between p-4">
 		<a href="/" class="comic-neue-bold-italic text-3xl">COMET</a>
 		{#if isMenuOpen}
 			<div
