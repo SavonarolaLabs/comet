@@ -55,7 +55,7 @@
 					COMET
 				</h1>
 				<p
-					class="mb-20 ml-4 flex items-center text-center text-2xl sm:text-left"
+					class="md:justify-left mb-20 ml-4 flex items-center justify-center text-center text-2xl sm:text-left"
 					style="font-family: fantasy"
 				>
 					It's like <img
