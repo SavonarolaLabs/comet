@@ -49,8 +49,15 @@
 	<div class="relative z-10 mx-auto max-w-4xl py-10 text-white">
 		<div class="flex" style="z-index:2;">
 			<div class="left-margin">
-				<h1 class="comic-neue-bold-italic mb-4 mt-40 text-9xl font-bold">COMET</h1>
-				<p class="mb-20 ml-4 flex items-center text-2xl" style="font-family: fantasy">
+				<h1
+					class="comic-neue-bold-italic mb-4 text-center text-8xl font-bold sm:mt-40 sm:text-left sm:text-9xl"
+				>
+					COMET
+				</h1>
+				<p
+					class="mb-20 ml-4 flex items-center text-center text-2xl sm:text-left"
+					style="font-family: fantasy"
+				>
 					It's like <img
 						src="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
 						width="40px"
@@ -61,6 +68,7 @@
 					but
 					<span class="bold-scale mx-3 pb-1">1000x</span> better.
 				</p>
+				<div class="mt200"></div>
 				<DontBuy></DontBuy>
 			</div>
 			<FireParticles />
@@ -82,6 +90,11 @@
 <Footer></Footer>
 
 <style>
+	@media (max-width: 639px) {
+		.mt200 {
+			margin-top: 500px;
+		}
+	}
 	.stars {
 		background-color: black;
 		animation: fadeToTransparent 30s infinite alternate;
@@ -100,6 +113,11 @@
 		font-family: 'Comic Neue', serif;
 		font-weight: 700;
 		font-style: italic;
+	}
+	@media (max-width: 639px) {
+		.left-margin {
+			width: 100vw;
+		}
 	}
 	.left-margin {
 		z-index: 10;

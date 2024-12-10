@@ -9,8 +9,8 @@
 	}
 </script>
 
-<nav class="relative bg-orange-600 text-white" style="z-index:10;">
-	<div class="container mx-auto flex items-center justify-between p-4">
+<nav class="relative bg-orange-600 text-white" style="z-index:200;">
+	<div class="container mx-auto flex items-center justify-between p-4" style="z-index:200;">
 		<a href="/" class="comic-neue-bold-italic text-3xl">COMET</a>
 		{#if isMenuOpen}
 			<div
@@ -53,7 +53,7 @@
 			</div>
 		{/if}
 
-		<div class="hidden items-center space-x-4 md:flex">
+		<div class="hidden items-center space-x-4 md:flex" style="z-index:200;">
 			<a href="#roadmap" class="comic-neue-bold-italic text-lg hover:underline">Roadmap</a>
 			<a href="#memes" class="comic-neue-bold-italic text-lg hover:underline">Memes</a>
 			<a href="/whitepaper" class="comic-neue-bold-italic text-lg hover:underline">Whitepaper</a>

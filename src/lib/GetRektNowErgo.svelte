@@ -8,7 +8,7 @@
 		href="https://dex.mewfinance.com/ergo/swap?base=0000000000000000000000000000000000000000000000000000000000000000&quote=0cd8c9f416e5b1ca9f986a7f10a84191dfb85941619e49e53c0dc30ebf83324b&initialPoolId=1f01dc8e29806d96ca0b79f8e798cd8cfce51c0e676aaedf6ab3464b37da9dfd"
 		class="cta"
 	>
-		<span>{text}</span>
+		<span class="whitespace-nowrap">{text}</span>
 		<span>
 			<svg
 				width="66px"

@@ -8,7 +8,7 @@
 		href="https://app.dexhunter.io/swap?tokenIdSell=&tokenIdBuy=d85d4588d4625b370121597ff88f3c1fa66f2a0cb7e4a7a9573a3c3e7273434f4d4554"
 		class="cta"
 	>
-		<span>{text}</span>
+		<span class="whitespace-nowrap">{text}</span>
 		<span>
 			<svg
 				width="66px"
